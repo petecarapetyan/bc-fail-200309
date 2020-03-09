@@ -1,9 +1,14 @@
 # bc-fail-200309
-brightcove responsive from https://support.brightcove.com/step-step-brightcove-player?bp
+brightcove responsive from https://support.brightcove.com/step-step-brightcove-player?bp SEE NUMBER 35!
 
 - This works for responsive player: https://github.com/petecarapetyan/bc-works-200309/blob/master/public/index.html</p>
 - This fails for responsive player: https://github.com/petecarapetyan/bc-fail-200309/blob/master/public/index.html</p>
   
+## How To Look At Brightcove code, in action:
+
+Works as responsive: https://bc-works.web.app/
+Fails as responsive: https://bc-fails.web.app/
+
 ## What are the other files in this repository?
 
 The only file that matters in this repo is public/index.html
