@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Brighcove Player Test Page</title>
+  <style>
+    .video-js {
+      height: 344px;
+      width: 610px;
+    }
+  </style>
+  <link href="https://players.brightcove.net/videojs-overlay/lib/videojs-overlay.css" rel='stylesheet'>
+</head>
+
+<body>
+<h1>video - non responsive</h1>
+<p>Except for the player, this is the same data-video-id="6136149884001"
+  data-account="6055873625001"
+  data-player="default" as https://bc-works.web.app/ which is perfectly responsible</p>
+  <p>This works: </p>
+  <p>This fails: </p>
+  <video  id="default"
+  data-video-id="6136149884001"
+  data-account="6055873625001"
+  data-player="default"
+    data-embed="default"
+    data-application-id
+    class="video-js"
+    controls></video>
+  <script src="https://players.brightcove.net/6055873625001/default_default/index.min.js"></script>
+
+  <script src="https://players.brightcove.net/videojs-overlay/lib/videojs-overlay.js"></script>
+
+  <script>
+    videojs.getPlayer('default').on('loadedmetadata', function() {
+      var myPlayer = this;
+      myPlayer.muted(true);
+      myPlayer.play();
+      myPlayer.overlay({
+        overlays: [{
+          content: 'This event-triggered overlay message appears when the video is playing',
+          start: 'play',
+          end: 'pause'
+        }]
+      });
+    });
+  </script>
+
+  </body>
+
+</html>
